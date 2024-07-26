@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <h1>Marlin 2.1.x Configuration for DIY 300x300x400 3D Printer</h1>
+    <h1>Marlin 2.1.x Configuration for DIY (old LK5-Pro) 300x300x400 3D Printer</h1>
     <p>This repository contains the configuration files for <a href="https://marlinfw.org/">Marlin 2.1.x</a> firmware tailored for a DIY 300x300x400 3D printer. It includes settings for a BTT TFT35 V3.0.1 display, a BLTouch auto bed leveling sensor, and a BTT SKR MINI E3 V3 mainboard.</p>
     <p>
     <h2>Features</h2>
