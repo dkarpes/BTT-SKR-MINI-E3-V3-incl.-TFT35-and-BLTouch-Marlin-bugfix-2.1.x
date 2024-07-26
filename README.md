@@ -16,7 +16,20 @@
         <li><strong>Printer Size:</strong> 300x300x400 mm</li>
     </ul>
     
-   <p> <h2>Display Configuration</h2>
+   <p> <h2>Firmware (bin file)</h2>
+    <p>Rename the file to Firmware.bin and copy the file to your sd card and update your printer.</p>
+    
+  <p> <h3>Hardware UART Pins</h3>
+    <ul>
+        <li><code>UART1_TX_PIN</code>: PA9 (default usage LCD connector)</li>
+        <li><code>UART1_RX_PIN</code>: PA10 (default usage LCD connector)</li>
+        <li><code>UART2_TX_PIN</code>: PA2 (default usage TFT connector)</li>
+        <li><code>UART2_RX_PIN</code>: PA3 (default usage TFT connector)</li>
+        <li><code>UART4_TX_PIN</code>: PC10 (default usage TMC UART)</li>
+        <li><code>UART4_RX_PIN</code>: PC11 (default usage TMC UART)</li>
+    </ul>
+    
+  </p> <p> <h2>Display Configuration</h2>
     <p>The BTT TFT35 V3.0.1 is set up to communicate over specific hardware UART and SPI pins, as defined in the <code>Configuration.adv.h</code> file:</p>
     
   <p> <h3>Hardware UART Pins</h3>
