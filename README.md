@@ -12,7 +12,7 @@
         <li><strong>Firmware:</strong> <a href="https://marlinfw.org/">Marlin 2.1.x</a></li>
         <li><strong>Mainboard:</strong> BTT SKR MINI E3 V3</li>
         <li><strong>Display:</strong> <a href="https://bigtree-tech.com/pages/download">BTT TFT35 V3.0.1</a> configured as TFTGLCD_PANEL_I2C</li>
-        <li><strong>Auto Bed Leveling:</strong> BLTouch (connected to Neopixel pins)</li>
+        <li><strong>Auto Bed Leveling:</strong> BLTouch (connected to Z-Probe pins)</li>
         <li><strong>Printer Size:</strong> 300x300x400 mm</li>
     </ul>
     
