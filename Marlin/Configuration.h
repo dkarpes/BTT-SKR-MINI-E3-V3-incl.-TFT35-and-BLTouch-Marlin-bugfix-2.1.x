@@ -1184,8 +1184,8 @@
  */
 #define X_MIN_ENDSTOP_HIT_STATE LOW   // X-axis min endstop triggers at LOW
 #define X_MAX_ENDSTOP_HIT_STATE HIGH  // X-axis max endstop triggers at HIGH
-#define Y_MIN_ENDSTOP_HIT_STATE HIGH   // Y-axis min endstop triggers at LOW
-#define Y_MAX_ENDSTOP_HIT_STATE LOW  // Y-axis max endstop triggers at HIGH
+#define Y_MIN_ENDSTOP_HIT_STATE LOW   // Y-axis min endstop triggers at LOW
+#define Y_MAX_ENDSTOP_HIT_STATE HIGH  // Y-axis max endstop triggers at HIGH
 #define Z_MIN_ENDSTOP_HIT_STATE HIGH   // Z-axis min endstop triggers at LOW
 #define Z_MAX_ENDSTOP_HIT_STATE HIGH  // Z-axis max endstop triggers at HIGH
 #define I_MIN_ENDSTOP_HIT_STATE HIGH
@@ -1248,7 +1248,7 @@
  * Override with M92 (when enabled below)
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 99.5 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 106.17 }
 
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.
@@ -1769,7 +1769,7 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR false
+#define INVERT_Y_DIR true
 #define INVERT_Z_DIR false
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
@@ -1807,8 +1807,8 @@
 
 //#define Z_AFTER_HOMING         10   // (mm) Height to move to after homing (if Z was homed)
 //#define XY_AFTER_HOMING { 10, 10 }  // (mm) Move to an XY position after homing (and raising Z)
-#define X_MIN_PIN PC0
-#define Y_MIN_PIN PC12
+//#define X_MIN_PIN PC0
+//#define Y_MIN_PIN PC1
 #define Z_MIN_PIN PC14
 
 //#define EVENT_GCODE_AFTER_HOMING "M300 P440 S200"  // Commands to run after G28 (and move to XY_AFTER_HOMING)
@@ -1816,7 +1816,7 @@
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
 #define X_HOME_DIR -1
-#define Y_HOME_DIR 1
+#define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 //#define I_HOME_DIR -1
 //#define J_HOME_DIR -1
@@ -1850,8 +1850,8 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+#define X_MAX_POS 300
+#define Y_MAX_POS 300
 #define Z_MAX_POS 400
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
@@ -1881,12 +1881,12 @@
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
   #define MIN_SOFTWARE_ENDSTOP_Z
-  #define MIN_SOFTWARE_ENDSTOP_I
-  #define MIN_SOFTWARE_ENDSTOP_J
-  #define MIN_SOFTWARE_ENDSTOP_K
-  #define MIN_SOFTWARE_ENDSTOP_U
-  #define MIN_SOFTWARE_ENDSTOP_V
-  #define MIN_SOFTWARE_ENDSTOP_W
+  //#define MIN_SOFTWARE_ENDSTOP_I
+  //#define MIN_SOFTWARE_ENDSTOP_J
+  //#define MIN_SOFTWARE_ENDSTOP_K
+  //#define MIN_SOFTWARE_ENDSTOP_U
+  //#define MIN_SOFTWARE_ENDSTOP_V
+  //#define MIN_SOFTWARE_ENDSTOP_W
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
@@ -1895,12 +1895,12 @@
   #define MAX_SOFTWARE_ENDSTOP_X
   #define MAX_SOFTWARE_ENDSTOP_Y
   #define MAX_SOFTWARE_ENDSTOP_Z
-  #define MAX_SOFTWARE_ENDSTOP_I
-  #define MAX_SOFTWARE_ENDSTOP_J
-  #define MAX_SOFTWARE_ENDSTOP_K
-  #define MAX_SOFTWARE_ENDSTOP_U
-  #define MAX_SOFTWARE_ENDSTOP_V
-  #define MAX_SOFTWARE_ENDSTOP_W
+  //#define MAX_SOFTWARE_ENDSTOP_I
+  //#define MAX_SOFTWARE_ENDSTOP_J
+  //#define MAX_SOFTWARE_ENDSTOP_K
+  //#define MAX_SOFTWARE_ENDSTOP_U
+  //#define MAX_SOFTWARE_ENDSTOP_V
+  //#define MAX_SOFTWARE_ENDSTOP_W
 #endif
 
 #if ANY(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
@@ -1920,7 +1920,7 @@
  * RAMPS-based boards use SERVO3_PIN for the first runout sensor.
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  */
-#define FILAMENT_RUNOUT_SENSOR
+//#define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
@@ -2279,13 +2279,13 @@
 
 // The center of the bed is at (X=0, Y=0)
 //#define BED_CENTER_AT_150_150
-//#define BED_CENTER_AT_0_0
+#define BED_CENTER_AT_0_0
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define X_HOME_POS (X_BED_SIZE / 2)
-#define Y_HOME_POS (Y_BED_SIZE / 2)
-#define Z_HOME_POS 0  // Assuming Z home position is at bed level
+//#define X_HOME_POS (X_BED_SIZE / 2)
+//#define Y_HOME_POS (Y_BED_SIZE / 2)
+//#define Z_HOME_POS 0  // Assuming Z home position is at bed level
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0
 //#define MANUAL_K_HOME_POS 0
