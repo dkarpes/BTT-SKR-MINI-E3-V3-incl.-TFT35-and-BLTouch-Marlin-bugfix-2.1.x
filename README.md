@@ -17,7 +17,7 @@
     </ul>
     
    <p> <h2>Firmware (bin file)</h2>
-    <p>Rename the file to Firmware.bin and copy the file to your sd card and update your printer.</p>
+    <p>Copy the firmware.bin file to your sd card and update your printer.</p>
 
   <p> <h2>Display Configuration</h2>
     <p>The BTT TFT35 V3.0.1 is set up to communicate over specific hardware UART and SPI pins, as defined in the <code>Configuration.adv.h</code> file:</p>
